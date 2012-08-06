@@ -10,7 +10,7 @@ function turfmarkup_zone_callback($match)
   $zone = substr($match[0], strlen(TURFMARKUP_ZONE));
 
   return '<a href="http://turfgame.com/map/' 
-    . urlencode($zone) . '">' 
+    . urlencode($zone) . '" target="_blank">' 
     . htmlentities($zone, ENT_COMPAT, 'UTF-8')
     . '</a>';
 }
@@ -25,7 +25,7 @@ function turfmarkup_player_callback($match)
   $player = substr($match[0], strlen(TURFMARKUP_PLAYER));
 
   return '<a href="http://turfgame.com/user/' 
-    . urlencode($player) . '">' 
+    . urlencode($player) . '" target="_blank">' 
     . htmlentities($player, ENT_COMPAT, 'UTF-8')
     . '</a>';
 }
