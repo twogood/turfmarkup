@@ -33,6 +33,11 @@ class FiltersTest extends PHPUnit_Framework_TestCase
       '<a href="http://turfgame.com/user/TurfBlekingeIT" target="_blank">TurfBlekingeIT</a>'
     );
 
+    $this->assertEquals(
+      turfmarkup_player_filter('player:fårahedern'),
+      '<a href="http://turfgame.com/user/farahedern" target="_blank">f&aring;rahedern</a>'
+    );
+
   }
 
 }
