@@ -38,6 +38,8 @@ class FiltersTest extends PHPUnit_Framework_TestCase
       '<a href="http://turfgame.com/user/farahedern" target="_blank">f&aring;rahedern</a>'
     );
 
+    $this->assertEquals(setlocale(LC_ALL, 'C'), 'C');
+
   }
 
 }
