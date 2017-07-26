@@ -9,7 +9,7 @@ function turfmarkup_zone_callback($match)
 
   $zone = substr($match[0], strlen(TURFMARKUP_ZONE));
 
-  return '<a href="http://turfgame.com/map/' 
+  return '<a href="https://turfgame.com/map/'
     . urlencode($zone) . '" target="_blank">' 
     . htmlentities($zone, ENT_COMPAT, 'UTF-8')
     . '</a>';
@@ -40,7 +40,7 @@ function turfmarkup_player_callback($match)
 
   $playerAscii = turfmarkup_player_ascii($player);
 
-  return '<a href="http://turfgame.com/user/' 
+  return '<a href="https://turfgame.com/user/'
     . urlencode($playerAscii) . '" target="_blank">' 
     . htmlentities($player, ENT_COMPAT, 'UTF-8')
     . '</a>';
