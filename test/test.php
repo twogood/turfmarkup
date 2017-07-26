@@ -14,12 +14,12 @@ class FiltersTest extends PHPUnit_Framework_TestCase
     );
 
     $this->assertEquals(
-      '.<a href="https://turfgame.com/map/Hultag'.urlencode('ö').'len" target="_blank">Hultag&ouml;len</a>,',
+      '.<a href="https://turfgame.com/map/Hultagölen" target="_blank">Hultagölen</a>,',
 	  turfmarkup_zone_filter('.zone:Hultagölen,')
     );
 
     $this->assertEquals(
-      'abc <a href="https://turfgame.com/map/'.urlencode('åäö').'" target="_blank">&aring;&auml;&ouml;</a> efg',
+      'abc <a href="https://turfgame.com/map/åäö" target="_blank">åäö</a> efg',
 	  turfmarkup_zone_filter('abc zone:åäö efg')
     );
 
@@ -34,8 +34,8 @@ class FiltersTest extends PHPUnit_Framework_TestCase
     );
 
     $this->assertEquals(
-      '<a href="http://turfgame.com/user/farahedern" target="_blank">f&aring;rahedern</a>',
-	  turfmarkup_player_filter('player:fårahedern')
+      '<a href="https://turfgame.com/user/FarbrorGrön" target="_blank">FarbrorGrön</a>',
+	  turfmarkup_player_filter('player:FarbrorGrön')
     );
 
     $this->assertEquals('C', setlocale(LC_ALL, 'C'));
